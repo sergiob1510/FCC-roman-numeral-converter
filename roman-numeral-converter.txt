@@ -1,0 +1,14 @@
+function convertToRoman(num) {
+ num = String(num).split('');
+ console.log(num);
+ let romans = [['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'], ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'], ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'], ['', 'M', 'MM', 'MMM', 'MV', 'V', 'VM', 'VMM', 'VMMM', 'MX', 'X']];
+
+ let result = '';
+ for (let i = 0, j = num.length-1; i < num.length; i++, j--) {
+   result += romans[j][num[i]];
+ }
+ console.log(result)
+ return result
+}
+
+convertToRoman(36);
